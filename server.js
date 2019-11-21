@@ -29,7 +29,7 @@ app.use(prefix, loginRoute);
 app.use(prefix, usersRoute);
 
 mongoose
-  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(db, { useNewUrlParser: true })
   .then(() => console.log("connected to mongoDB", db))
   .catch(err => console.log("Error", err));
 
